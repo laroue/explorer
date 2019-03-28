@@ -6,7 +6,8 @@ const SECONDS_PER_DAY = 86400
 
 class CryptoCompareService {
   async price(currency) {
-    const response = await axios.get(`https://min-api.cryptocompare.com/data/price?fsym=ARK&tsyms=${currency}`)
+//  const response = await axios.get(`https://min-api.cryptocompare.com/data/price?fsym=LRO&tsyms=${currency}`)
+    const response = await axios.get(`https://min-api.cryptocompare.com/data/price?fsym=MLC&tsyms=${currency}`)
     if (response.data.hasOwnProperty(currency)) {
       return Number(response.data[currency])
     }
@@ -36,7 +37,7 @@ class CryptoCompareService {
     const date = Math.round(new Date().getTime() / 1000)
     const token = store.getters['network/token']
 
-    let targetCurrency = 'USD'
+    let targetCurrency = 'EUR'
     if (store.getters['currency/name'] !== token) {
       targetCurrency = store.getters['currency/name']
     }

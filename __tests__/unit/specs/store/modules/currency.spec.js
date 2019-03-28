@@ -21,13 +21,13 @@ describe('currency store modules', () => {
 
   it('should set the last conversion rate', () => {
     store.dispatch('currency/setLastConversion', {
-      to: 'USD',
+      to: 'EUR',
       timestamp: 1533772799,
       rate: 0.8034
     })
 
     expect(store.getters['currency/lastConversion']).toEqual({
-      to: 'USD',
+      to: 'EUR',
       timestamp: 1533772799,
       rate: 0.8034
     })

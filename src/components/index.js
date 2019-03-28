@@ -25,7 +25,7 @@ Vue.component('table-wallets', require('@/components/tables/Wallets').default)
 Vue.component('table-wallets-mobile', require('@/components/tables/mobile/Wallets').default)
 
 // Misc.
-Vue.component('ark-meter', require('@/components/ArkMeter').default)
+Vue.component('mlc-meter', require('@/components/Meter').default)
 Vue.component('content-header', require('@/components/ContentHeader').default)
 Vue.component('modal', require('@/components/Modal').default)
 

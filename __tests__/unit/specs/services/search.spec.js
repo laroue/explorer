@@ -5,7 +5,7 @@ describe('Search Service', () => {
   beforeAll(() => {
     jest.setTimeout(60000)
 
-    store.dispatch('network/setServer', 'https://explorer.ark.io/api/v2')
+    store.dispatch('network/setServer', 'https://explorer.laroue.org/api/v2')
   })
 
   it('should return address when searching for existing wallet', async () => {
@@ -26,7 +26,7 @@ describe('Search Service', () => {
   })
 
   it('should return delegate address when searching for existing username', async () => {
-    const data = await SearchService.delegateByQuery('arkpool')
+    const data = await SearchService.delegateByQuery('mlcpool')
     expect(Object.keys(data).sort()).toEqual([
       'username',
       'address',

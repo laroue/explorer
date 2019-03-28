@@ -1,14 +1,14 @@
 {
-  "title": "DARK Explorer",
-  "server": "https://dexplorer.ark.io/api/v2",
+  "title": "laroue Devnet Explorer",
+  "server": "http://212.83.146.7:4103/api/v2",
   "alias": "Development",
-  "activeDelegates": 51,
-  "rewardOffset": 10800,
+  "activeDelegates": "51",
+  "rewardOffset": "75600",
   "currencies": [],
   "knownWallets": {},
   "defaults": {
-    "token": "DARK",
-    "symbol": "DѦ",
+    "token": "ROUE",
+    "symbol": "☸",
     "currency": null,
     "priceChart": false
   }

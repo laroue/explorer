@@ -13,9 +13,9 @@ localVue.use(VueI18n)
 localVue.use(Vuex)
 
 const i18n = new VueI18n({
-  locale: 'en-gb',
-  fallbackLocale: 'en-gb',
-  messages: { 'en-gb': {} },
+  locale: 'fr',
+  fallbackLocale: 'fr',
+  messages: { 'fr': {} },
   silentTranslationWarn: true
 })
 
@@ -35,10 +35,10 @@ const store = new Vuex.Store({
     network: {
       namespaced: true,
       state: {
-        currencies: {'USD': '$'},
+        currencies: {'EUR': '€'},
       },
       getters: {
-        currencies: state => ({'USD': '$'})
+        currencies: state => ({'EUR': '€'})
       },
     }
   },
@@ -59,14 +59,14 @@ describe('header/currencies/Desktop', () => {
     })
 
     let el = wrapper.find('.menu-button')
-    expect(el.text()).toBe('USD')
+    expect(el.text()).toBe('EUR')
     el.trigger('click')
 
     wrapper.vm.$nextTick(() => {
       expect(dispatchMock).toHaveBeenCalledTimes(4)
-      expect(dispatchMock).toHaveBeenNthCalledWith(1, 'currency/setName', 'USD')
+      expect(dispatchMock).toHaveBeenNthCalledWith(1, 'currency/setName', 'EUR')
       expect(dispatchMock).toHaveBeenNthCalledWith(2, 'currency/setRate', 12.34)
-      expect(dispatchMock).toHaveBeenNthCalledWith(3, 'currency/setSymbol', '$')
+      expect(dispatchMock).toHaveBeenNthCalledWith(3, 'currency/setSymbol', '€')
       expect(dispatchMock).toHaveBeenNthCalledWith(4, 'ui/setHeaderType', null)
       done()
     })
@@ -103,14 +103,14 @@ describe('header/currencies/Mobile', () => {
     })
 
     let el = wrapper.find('.menu-container > li')
-    expect(el.text()).toBe('USD')
+    expect(el.text()).toBe('EUR')
     el.trigger('click')
 
     wrapper.vm.$nextTick(() => {
       expect(dispatchMock).toHaveBeenCalledTimes(4)
-      expect(dispatchMock).toHaveBeenNthCalledWith(1, 'currency/setName', 'USD')
+      expect(dispatchMock).toHaveBeenNthCalledWith(1, 'currency/setName', 'EUR')
       expect(dispatchMock).toHaveBeenNthCalledWith(2, 'currency/setRate', 12.34)
-      expect(dispatchMock).toHaveBeenNthCalledWith(3, 'currency/setSymbol', '$')
+      expect(dispatchMock).toHaveBeenNthCalledWith(3, 'currency/setSymbol', '€')
       expect(dispatchMock).toHaveBeenNthCalledWith(4, 'ui/setHeaderType', null)
       done()
     })

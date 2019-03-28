@@ -102,10 +102,11 @@ const methods = {
     }
 
     const cryptos = {
-      'ARK': 'Ѧ',
+      'MLC': 'Ѧ',
       'BTC': 'Ƀ',
       'ETH': 'Ξ',
-      'LTC': 'Ł'
+      'LTC': 'Ł',
+      'LRO': '☸'
     }
 
     return [store.getters['network/token'], 'BTC', 'ETH', 'LTC'].some(

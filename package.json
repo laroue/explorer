@@ -1,14 +1,14 @@
 {
-  "name": "ark-explorer",
+  "name": "explorer",
   "version": "3.0.0",
-  "description": "A Blockchain Explorer for ARK using Vue.js and Tailwind CSS",
+  "description": "A Blockchain Explorer using Vue.js and Tailwind CSS",
   "author": "Brian Faust",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arkecosystem/explorer.git"
+    "url": "git+https://github.com/laroue/explorer.git"
   },
   "bugs": {
-    "url": "https://github.com/arkecosystem/explorer/issues"
+    "url": "https://github.com/laroue/explorer/issues"
   },
   "license": "MIT",
   "scripts": {
@@ -30,8 +30,8 @@
     "animate.css": "^3.7.0",
     "axios": "^0.18.0",
     "chart.js": "^2.7.3",
-    "connect-history-api-fallback": "^1.5.0",
-    "express": "^4.16.3",
+    "connect-history-api-fallback": "^1.6.0",
+    "express": "^4.16.4",
     "lodash": "^4.17.10",
     "moment": "^2.22.2",
     "node-emoji": "^1.8.1",

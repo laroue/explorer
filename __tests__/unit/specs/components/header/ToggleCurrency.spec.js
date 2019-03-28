@@ -10,9 +10,9 @@ localVue.use(VueI18n)
 localVue.use(Vuex)
 
 const i18n = new VueI18n({
-  locale: 'en-gb',
-  fallbackLocale: 'en-gb',
-  messages: { 'en-gb': {} },
+  locale: 'fr',
+  fallbackLocale: 'fr',
+  messages: { 'fr': {} },
   silentTranslationWarn: true
 })
 
@@ -29,11 +29,11 @@ const store = new Vuex.Store({
     currency: {
       namespaced: true,
       state: {
-        name: 'USD',
+        name: 'EUR',
         rate: 1.5
       },
       getters: {
-        name: state => 'USD',
+        name: state => 'EUR',
         rate: state => 1.5
       }
     }

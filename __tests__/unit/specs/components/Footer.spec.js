@@ -7,9 +7,9 @@ const localVue = createLocalVue()
 localVue.use(VueI18n)
 
 const i18n = new VueI18n({
-  locale: 'en-gb',
-  fallbackLocale: 'en-gb',
-  messages: { 'en-gb': {} },
+  locale: 'fr',
+  fallbackLocale: 'fr',
+  messages: { 'fr': {} },
   silentTranslationWarn: true
 })
 
